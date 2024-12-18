@@ -3,9 +3,9 @@
 // Super User Login Daten
 
 $servername = "localhost";
-$dbname = "super_user_log";
-$db_username = "u414826164_root";
-$db_password = "tb?ftM16#Dt6";
+$dbname = "super_user_login";
+$db_username = "root";
+$db_password = "";
 
 //Verbindung mit db-Herstellen
 
@@ -19,8 +19,4 @@ if ($conn->connect_error) {
 
 if ($conn) {
     echo "Verbindung zur Datenbank hergestellt";
-}
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $username = trim($_POST["username"]);
-    $password = trim($_POST["password"]);
 }
