@@ -32,7 +32,7 @@
                         <input type="password" class="form-control" id="password" placeholder="Gib dein Passwort ein" required>
                     </div>
                     <div class="d-grid">
-                        <button type="submit" class="btn btn-primary">Einloggen</button>
+                        <button type="submit" class="btn btn-primary">Login</button>
                     </div>
                     <div class="mt-3 text-center">
                         <a href="#">Passwort vergessen?</a>
