@@ -4,7 +4,7 @@
 
 $servername = "localhost";
 $dbname = "super_user_log";
-$db_username = "root";
+$db_username = "u414826164_root";
 $db_password = "tb?ftM16#Dt6";
 
 //Verbindung mit db-Herstellen
