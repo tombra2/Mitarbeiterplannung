@@ -2,7 +2,7 @@
 
 // Super User Login Daten
 
-$servername = "127.0.0.1:3306";
+$servername = "localhost";
 $dbname = "super_user_log";
 $db_username = "root";
 $db_password = "tb?ftM16#Dt6";
