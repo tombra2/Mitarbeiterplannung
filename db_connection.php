@@ -1,22 +1,32 @@
 <?php
 
-// Super User Login Daten
+//Login data for database (super users)
 
-$servername = "localhost";
-$dbname = "super_user_login";
-$db_username = "root";
-$db_password = "";
+$hostname = "localhost";
+$username = "root";
+$password = "";
+$database = "super_user_login";
+$database_2 = "mitarbeiter";
 
-//Verbindung mit db-Herstellen
+//Connection to database
 
-$conn = new mysqli($servername, $db_username, $db_password, $dbname);
+$conn = new mysqli($hostname, $username, $password, $database);
+db_error($conn);
+
+
+$conn_2 = new mysqli($hostname, $username, $password, $database_2);
+db_error($conn_2);
+
+
 
 // Verbindung überprüfen
+function db_error($temp_conn)
+{
+    if ($temp_conn->connect_error) {
+        die("Verbindung konnte nicht hergestellt werden".$temp_conn->connect_error);
+    }
 
-if ($conn->connect_error) {
-    die("Verbindung konnte nicht hergestellt werden".$conn->connect_error);
-}
-
-if ($conn) {
-    echo "Verbindung zur Datenbank hergestellt";
+    if ($temp_conn) {
+        echo "Verbindung zur Datenbank hergestellt";
+    }
 }

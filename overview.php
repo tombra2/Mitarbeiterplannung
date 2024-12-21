@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <?php
-// protected.php
+
 session_start();
 
 // Prüfen, ob der Benutzer eingeloggt ist
 if (!isset($_SESSION['username'])) {
-    header("Location: login.html");
+    header("Location: overview.php");
     exit();
     $username = $_SESSION["username"];
 }
@@ -25,8 +25,9 @@ if (!isset($_SESSION['username'])) {
 <body>
   <?php include "navmenu.php"; ?>
 
+
   <main class="container mt-4">
-    <h1>Hallo {$username}</h1>
+    <h1>Hallo <?php {$username;} ?></h1>
     <h1>Willkommen auf der Mitarbeiterübersicht</h1>
     <p>Hier ist der Hauptinhalt. Passe die Fenstergröße an, um das responsive Verhalten der Navbar zu testen.</p>
   </main>
