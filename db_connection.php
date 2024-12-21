@@ -10,12 +10,12 @@ $database_2 = "mitarbeiter";
 
 //Connection to database
 
-$conn = new mysqli($hostname, $username, $password, $database);
-db_error($conn);
+$conn_login = new mysqli($hostname, $username, $password, $database);
+db_error($conn_login);
 
 
-$conn_2 = new mysqli($hostname, $username, $password, $database_2);
-db_error($conn_2);
+$conn_mitarbeiter = new mysqli($hostname, $username, $password, $database_2);
+db_error($conn_mitarbeiter);
 
 
 

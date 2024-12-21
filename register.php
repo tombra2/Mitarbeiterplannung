@@ -41,7 +41,8 @@
         if ($password == $password_repeat) {
 
             $hashed_password = password_hash($password, PASSWORD_DEFAULT);
-            $statement = $conn->prepare("INSERT INTO user(user,password)values (?,?)");
+            $statement = $conn_login->prepare("INSERT INTO user(user,password)values (?,?)");
+
             $statement->bind_param("ss", $username, $hashed_password);
 
             if ($statement->execute()) {
@@ -50,7 +51,7 @@
                 echo "Fehler: ".$statement->error;
             }
             $statement->close();
-            $conn->close();
+            $conn_login->close();
             exit;
         } else {
             echo "Passwörter stimmen nicht überein";
