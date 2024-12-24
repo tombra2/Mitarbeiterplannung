@@ -7,10 +7,11 @@ $username = "u414826164_root";
 $password = "txj_gmr2zrp8HUK-ufq";
 $database = "login";
 $database_2 = "mitarbeiter";
+$port = 3306;
 
 //Connection to database
 
-$conn_login = new mysqli($hostname, $username, $password, $database);
+$conn_login = new mysqli($hostname, $username, $password, $database, $port);
 db_error($conn_login);
 
 

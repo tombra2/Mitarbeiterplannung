@@ -41,7 +41,8 @@
         if ($password == $password_repeat) {
 
             $hashed_password = password_hash($password, PASSWORD_DEFAULT);
-            $statement = $conn_login->prepare("INSERT INTO user(user,password)values (?,?)");
+            $statement = $conn_login->prepare("INSERT INTO login(username,password)values (?,?)");
+
 
             $statement->bind_param("ss", $username, $hashed_password);
 
