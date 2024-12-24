@@ -2,10 +2,10 @@
 
 //Login data for database (super users)
 
-$hostname = "localhost";
-$username = "root";
-$password = "";
-$database = "super_user_login";
+$hostname = "92.113.22.4";
+$username = "u414826164_root";
+$password = "txj_gmr2zrp8HUK-ufq";
+$database = "login";
 $database_2 = "mitarbeiter";
 
 //Connection to database
